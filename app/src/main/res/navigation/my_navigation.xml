@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.passportgenerator.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addPassportFragment"
+            app:destination="@id/addPassportFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_infoPassportFragment"
+            app:destination="@id/infoPassportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPassportFragment"
+        android:name="com.example.passportgenerator.ui.AddPassportFragment"
+        android:label="fragment_add_passport"
+        tools:layout="@layout/fragment_add_passport" />
+    <fragment
+        android:id="@+id/infoPassportFragment"
+        android:name="com.example.passportgenerator.ui.InfoPassportFragment"
+        android:label="fragment_info_passport"
+        tools:layout="@layout/fragment_info_passport" />
+</navigation>
